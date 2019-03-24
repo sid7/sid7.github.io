@@ -1,0 +1,23 @@
+// bootstrap 4 break points
+$break-points: (
+  s: 576px,
+  m: 768px,
+  l: 992px,
+  xl: 1200px
+);
+
+@mixin media-from($min, $lst: $break-points) {
+  @media (min-width: map-get($lst, $min)) {
+    @content;
+  }
+}
+@mixin media-till($max, $lst: $break-points) {
+  @media (max-width: map-get($lst, $max)) {
+    @content;
+  }
+}
+@mixin media-bw($min, $max, $lst: $break-points) {
+  @media (min-width: map-get($lst, $min)) and (max-width: map-get($lst, $max)) {
+    @content;
+  }
+}
