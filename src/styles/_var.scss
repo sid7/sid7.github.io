@@ -1,4 +1,5 @@
 $sec: (home, about, skills, projects, contact);
+$shadow: var(--sec-color) 0px 2px 4px;
 
 $bin: (
   themes: (
@@ -28,6 +29,14 @@ $themes: (
   flex-wrap: wrap;
 }
 
+@mixin shadow($color: rgb(168, 168, 168)) {
+  box-shadow: $color 0px 2px 4px;
+}
+@mixin border-radius($dir, $w: 5px) {
+  border-#{$dir}-left-radius: $w;
+  border-#{$dir}-right-radius: $w;
+}
+
 :root {
   --border-width: 10px;
   --main-color: #{theme(home)};
@@ -39,9 +48,13 @@ $themes: (
       --main-color: var(--sec-#{$theme});
       // --main-color-lighter: theme-alpha($theme, 0.11);
     }
+    @at-root .sec-#{$theme} {
+      --sec-color: #{$color};
+    }
   }
 
-  @media (min-width: 500px) {
+  // @media (min-width: 500px) {
+    @include media-from(m) {
     --border-width: 25px;
   }
 }

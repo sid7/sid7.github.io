@@ -12,7 +12,7 @@
   z-index: 98;
   will-change: background-color;
   padding: 5px;
-  @media (min-width: 500px) {
+  @include media-from(m) {
     justify-content: space-evenly;
     position: sticky;
     top: 0;

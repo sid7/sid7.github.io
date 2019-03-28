@@ -6,11 +6,15 @@ header {
   @extend %flx;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
   text-align: center;
   background-color: var(--sec-home);
   min-height: calc(100vh - (var(--border-width) * 2) - 41px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  &,
+  a {
+    color: #fff;
+  }
 
   h1 {
     font-size: 20vmin;
@@ -18,7 +22,7 @@ header {
   }
 
   @at-root .site-nav ::selection,
-  ::selection {
+    ::selection {
     // color: var(--sec-home);
     background-color: rgba($color: #fff, $alpha: 0.3);
   }
@@ -35,6 +39,29 @@ header {
     padding: 5px 15px;
     margin-top: 5px;
   }
+  .sec-content {
+    padding: 5px 15px;
+  }
+
+  &-contact {
+    @extend %flx;
+    flex-direction: column;
+    .sec-content {
+      @extend %flx;
+      flex-direction: column;
+      margin: auto;
+    }
+    .link-btn {
+      display: block;
+      margin: 15px;
+      @each $p, $s in (s: 1.2rem, m: 1.5rem, l: 2rem, xl: 2.5rem) {
+        @include media-from($p) {
+          font-size: $s;
+        }
+      }
+    }
+  }
+
   ::selection {
     color: #fff;
     background-color: var(--sel-bg);
