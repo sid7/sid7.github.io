@@ -7,17 +7,17 @@ $break-points: (
 );
 
 @mixin media-from($min, $lst: $break-points) {
-  @media (min-width: map-get($lst, $min)) {
+  @media (min-width: if(type-of($min) == string, map-get($lst, $min), $min)) {
     @content;
   }
 }
-@mixin media-till($max, $lst: $break-points) {
-  @media (max-width: map-get($lst, $max)) {
+@mixin media-to($max, $lst: $break-points) {
+  @media (max-width: if(type-of($max) == string, map-get($lst, $max), $max)) {
     @content;
   }
 }
 @mixin media-bw($min, $max, $lst: $break-points) {
-  @media (min-width: map-get($lst, $min)) and (max-width: map-get($lst, $max)) {
+  @media (min-width: if(type-of($min) == string, map-get($lst, $min), $min)) and (max-width: if(type-of($max) == string, map-get($lst, $max), $max)) {
     @content;
   }
 }
