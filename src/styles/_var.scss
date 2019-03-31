@@ -29,13 +29,6 @@ $themes: (
   flex-wrap: wrap;
 }
 
-@mixin shadow($color: rgb(168, 168, 168)) {
-  box-shadow: $color 0px 2px 4px;
-}
-@mixin border-radius($dir, $w: 5px) {
-  border-#{$dir}-left-radius: $w;
-  border-#{$dir}-right-radius: $w;
-}
 
 :root {
   --border-width: 10px;
@@ -50,11 +43,12 @@ $themes: (
     }
     @at-root .sec-#{$theme} {
       --sec-color: #{$color};
+      --sec-color-lighter: var(--sec-#{$theme}-lighter);
     }
   }
 
   // @media (min-width: 500px) {
-    @include media-from(m) {
+  @include media-from(m) {
     --border-width: 25px;
   }
 }

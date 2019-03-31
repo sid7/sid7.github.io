@@ -32,7 +32,7 @@ header {
 .sec {
   min-height: calc(100vh - var(--border-width) - 41px);
   padding: 5px 15px;
-  
+
   .sec-heading {
     font-size: 12vmin;
     font-weight: 300;
@@ -41,7 +41,39 @@ header {
     margin-top: 5px;
   }
   .sec-content {
-    padding: 5px 15px;
+    padding: 5px 0;
+    @include media-from(m) {
+      padding: 5px 15px;
+    }
+  }
+
+  &-projects {
+    @include flx;
+    flex-direction: column;
+    .sec-content {
+      @include margin(y, auto);
+      display: grid;
+      @each $p, $gap in (s: 35px, l: 65px) {
+        @include media-from($p) {
+          grid-column-gap: $gap;
+        }
+      }
+      grid-row-gap: 15px;
+      @include media-from(s) {
+        grid-row-gap: 25px;
+      }
+      // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      @each $p, $col in (m: 2, xl: 3) {
+        @include media-from($p) {
+          grid-template-columns: repeat($col, 1fr);
+        }
+      }
+    }
+    .link-btn {
+      &:focus {
+        box-shadow: 0 0 0 0.2rem theme-alpha(projects, 0.5);
+      }
+    }
   }
 
   &-contact {

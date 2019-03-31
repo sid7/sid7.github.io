@@ -5,7 +5,7 @@ import About from "./components/about";
 import MyProjects from "./components/projects";
 import Contact from "./components/contact";
 
-import { links } from "./data";
+import { links, projectsLst } from "./data";
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
         <Header />
         <Navbar />
         <About />
-        <MyProjects />
+        <MyProjects lst={projectsLst} pl={{...links.profiles, FreeCodeCamp: links.fcc}} />
         <Contact {...links} />
       </>
     );

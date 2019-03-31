@@ -1,0 +1,28 @@
+$codMap: (
+  x: (
+    right,
+    left
+  ),
+  y: (
+    top,
+    bottom
+  )
+);
+@mixin flx {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin margin($cod, $val) {
+  @each $dir in map-get($codMap, $cod) {
+    margin-#{$dir}: $val;
+  }
+}
+
+@mixin shadow($color: rgb(168, 168, 168)) {
+  box-shadow: $color 0px 2px 4px;
+}
+@mixin border-radius($dir, $w: 5px) {
+  border-#{$dir}-left-radius: $w;
+  border-#{$dir}-right-radius: $w;
+}
