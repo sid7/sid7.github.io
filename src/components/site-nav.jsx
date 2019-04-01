@@ -1,10 +1,16 @@
 import React from "react";
 
-const Navbar = () => (
+const Navbar = ({ handleClick }) => (
   <nav className="site-nav">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" onClick={handleClick}>
+      About
+    </a>
+    <a href="#projects" onClick={handleClick}>
+      Projects
+    </a>
+    <a href="#contact" onClick={handleClick}>
+      Contact
+    </a>
   </nav>
 );
 
