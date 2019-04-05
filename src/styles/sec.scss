@@ -47,6 +47,33 @@ header {
     }
   }
 
+  &-about {
+    p {
+      font-size: 1.5rem;
+      @include media-from(m) {
+        font-size: 2rem;
+      }
+    }
+    .sec-content {
+
+    }
+    .flx {
+      justify-content: space-between;
+      @include media-to(l) {
+        flex-direction: column;
+        .lst, .lst-card {
+          flex-grow: 1;
+        }
+      }
+      @include media-from(l) {
+        .lst {
+          margin: auto;
+          width: 25vw;
+        }
+      }
+    }
+  }
+
   &-projects {
     @include flx;
     flex-direction: column;
@@ -92,6 +119,14 @@ header {
           font-size: $s;
         }
       }
+    }
+  }
+
+  .link {
+    color: var(--sec-color);
+    font-weight: 500;
+    &:hover {
+      border-bottom: 2px solid;
     }
   }
 

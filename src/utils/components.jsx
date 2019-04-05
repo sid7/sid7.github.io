@@ -17,3 +17,27 @@ export const Stamp = ({ url, children, icon, fa = "fab" }) => (
     <span className="stamp-title">{children}</span>
   </A>
 );
+
+export const SkillCard = ({ lst }) => (
+  <div className="lst-card">
+    <h3>Skills</h3>
+    <div className="content">
+      {Object.entries(lst).map(([a, b], i) => (
+        <div key={i}>
+          <I icon={["fab", b]} fixedWidth /> {a}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+export const Lst = ({ name, children, ...props }) => (
+  <dl {...props}>
+    <dt>{name}</dt>
+    {Object.entries(children).map(([a, b], i) => (
+      <dd key={i}>
+        <A href={b}>{a}</A>
+      </dd>
+    ))}
+  </dl>
+);

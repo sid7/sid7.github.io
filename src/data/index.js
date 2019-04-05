@@ -17,6 +17,14 @@ export const Certificates = {
   "FreeCodeCamp: JavaScript Algorithms and Data Structures Certificate":
     "https://www.freecodecamp.org/certification/sid7/javascript-algorithms-and-data-structures"
 };
+export const skillLst = {
+  "HTML 5": "html5",
+  "CSS 3": "css3-alt",
+  "JavaScript": "js",
+  "React JS": "react",
+  "Node JS": "node-js",
+  "Git": "git-square"
+}
 export const Achievements = {
   "Recipient of Google India Challenge Scholarship: Mobile Web":
     "https://in.udacity.com/google-india-scholarships",
