@@ -19,11 +19,10 @@
     padding: 2.5px;
   }
   a {
-    color: #eee;
+    color: #fff;
     border-bottom: 2px solid transparent;
     outline: none;
     &.active {
-      color: #fff;
       border-color: #fff;
     }
     &:not(.active):hover {
