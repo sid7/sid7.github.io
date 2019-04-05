@@ -8,7 +8,6 @@
   font-size: 1.6rem;
   bottom: 0;
   left: 0;
-  padding: 5px;
   z-index: 98;
   will-change: background-color;
   padding: 5px;
@@ -22,12 +21,16 @@
   a {
     color: #eee;
     border-bottom: 2px solid transparent;
+    outline: none;
     &.active {
       color: #fff;
       border-color: #fff;
     }
     &:not(.active):hover {
       color: #fafafa;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($color: #fff, $alpha: 0.5);
     }
   }
 }

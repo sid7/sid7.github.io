@@ -2,8 +2,10 @@
   @include flx;
   flex-direction: column;
   text-align: center;
-  margin: auto;
   border-radius: 5px;
+  @include media-from(l) {
+    margin: auto;
+  }
 
   h3 {
     color: #fff;

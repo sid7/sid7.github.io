@@ -34,8 +34,17 @@ body {
 main,
 header,
 section,
-nav {
+nav,
+footer {
   display: block;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+main {
+  background-color: #fff;
 }
 
 h1,
