@@ -1,0 +1,52 @@
+.stamp-group {
+  @extend %flx;
+  @include media-to(340px) {
+    flex-direction: column;
+  }
+  justify-content: center;
+}
+
+.stamp {
+  display: inline-block;
+  text-align: center;
+  color: inherit;
+  margin: 15px;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  user-select: none;
+  outline: none;
+  flex-grow: 1;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  &-icon {
+    padding: 5px;
+    font-size: 3em;
+    @each $p, $s in (s: 4em, m: 5em, l: 5.5em, xl: 6em) {
+      @include media-from($p) {
+        font-size: $s;
+      }
+    }
+  }
+  &-title {
+    display: block;
+    color: var(--sec-color);
+    background-color: #fff;
+    border-top: 2px solid var(--sec-contact-lighter);
+    padding: 5px 15px;
+    @include border-radius(bottom);
+    @include media-from(m) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: var(--sec-color);
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: $shadow, 0 0 0 0.2rem theme-alpha(contact, 0.5);
+  }
+}

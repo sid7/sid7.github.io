@@ -1,0 +1,143 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--sec-home);
+  min-height: calc(100vh - (var(--border-width) * 2) - 41px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  &,
+  a {
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 20vmin;
+    font-weight: 300;
+  }
+
+  @at-root .site-nav ::selection,
+    ::selection {
+    // color: var(--sec-home);
+    background-color: rgba($color: #fff, $alpha: 0.3);
+  }
+}
+
+.sec {
+  min-height: calc(100vh - var(--border-width) - 41px);
+  padding: 5px 15px;
+
+  .sec-heading {
+    font-size: 12vmin;
+    font-weight: 300;
+    border-bottom: 2px solid;
+    padding: 5px 15px;
+    margin-top: 5px;
+  }
+  .sec-content {
+    padding: 5px 0;
+    @include media-from(m) {
+      padding: 5px 15px;
+    }
+  }
+
+  &-about {
+    p {
+      font-size: 1.5rem;
+      @include media-from(m) {
+        font-size: 2rem;
+      }
+    }
+    .link:focus {
+      box-shadow: 0 0 0 0.2rem theme-alpha(about, 0.5);
+    }
+    .flx {
+      justify-content: space-between;
+      @include media-to(l) {
+        flex-direction: column;
+        .lst,
+        .lst-card {
+          flex-grow: 1;
+        }
+      }
+      @include media-from(l) {
+        .lst {
+          margin: auto;
+          width: 25vw;
+        }
+      }
+    }
+  }
+
+  &-projects {
+    @include flx;
+    flex-direction: column;
+    .sec-content {
+      @include margin(y, auto);
+      display: grid;
+      @each $p, $gap in (s: 35px, l: 65px) {
+        @include media-from($p) {
+          grid-column-gap: $gap;
+        }
+      }
+      grid-row-gap: 15px;
+      @include media-from(s) {
+        grid-row-gap: 25px;
+      }
+      // grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      @each $p, $col in (m: 2, xl: 3) {
+        @include media-from($p) {
+          grid-template-columns: repeat($col, 1fr);
+        }
+      }
+    }
+    .link-btn {
+      &:focus {
+        box-shadow: 0 0 0 0.2rem theme-alpha(projects, 0.5);
+      }
+    }
+  }
+
+  &-contact {
+    @extend %flx;
+    flex-direction: column;
+    .sec-content {
+      @extend %flx;
+      flex-direction: column;
+      margin: auto;
+    }
+    .link-btn {
+      display: block;
+      margin: 15px;
+      @each $p, $s in (s: 1.2rem, m: 1.5rem, l: 2rem, xl: 2.5rem) {
+        @include media-from($p) {
+          font-size: $s;
+        }
+      }
+    }
+  }
+
+  .link {
+    color: var(--sec-color);
+    font-weight: 500;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 2px;
+    &:hover {
+      border-bottom: 2px solid;
+    }
+  }
+
+  ::selection {
+    color: #fff;
+    background-color: var(--sel-bg);
+  }
+}
+@each $s in $sec {
+  .sec-#{$s} {
+    color: var(--sec-#{$s});
+    --sel-bg: var(--sec-#{$s});
+  }
+}

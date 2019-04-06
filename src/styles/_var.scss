@@ -1,0 +1,54 @@
+$sec: (home, about, skills, projects, contact);
+$shadow: var(--sec-color) 0px 2px 4px;
+
+$bin: (
+  themes: (
+    home: #ff7f50,
+    projects_1: #795548,
+    projects_2: #20c997,
+    projects_3: #03a9f4
+  )
+);
+
+$themes: (
+  home: #ff5722,
+  about: #009688,
+  skills: #e91e63,
+  projects: #0279af,
+  contact: #673ab7
+);
+@function theme($key) {
+  @return map-get($themes, $key);
+}
+@function theme-alpha($key, $a: 0.5) {
+  @return rgba($color: map-get($themes, $key), $alpha: $a);
+}
+
+%flx {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+:root {
+  --border-width: 10px;
+  --main-color: #{theme(home)};
+
+  @each $theme, $color in $themes {
+    --sec-#{$theme}: #{$color};
+    --sec-#{$theme}-lighter: #{theme-alpha($theme, 0.11)};
+    @at-root .active-#{$theme} {
+      --main-color: var(--sec-#{$theme});
+      // --main-color-lighter: theme-alpha($theme, 0.11);
+    }
+    @at-root .sec-#{$theme} {
+      --sec-color: #{$color};
+      --sec-color-lighter: var(--sec-#{$theme}-lighter);
+    }
+  }
+
+  // @media (min-width: 500px) {
+  @include media-from(m) {
+    --border-width: 25px;
+  }
+}
