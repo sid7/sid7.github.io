@@ -27,7 +27,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header />
+        <Header {...links} />
         <Navbar handleClick={utils.aniScroll} />
         <About />
         <MyProjects

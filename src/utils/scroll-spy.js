@@ -1,6 +1,14 @@
 const $ = q => document.querySelector(q);
 const $$ = Q => [].slice.call(document.querySelectorAll(Q));
 
+const colors = {
+  home: "#ff5722",
+  about: "#009688",
+  skills: "#e91e63",
+  projects: "#0279af",
+  contact: "#673ab7"
+};
+
 export default new class scrollSpy {
   constructor() {
     this.ticks = {
@@ -34,10 +42,16 @@ export default new class scrollSpy {
         if (a) {
           a.classList.add("active");
           document.body.className = `active-${sec}`;
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute("content", colors[sec]);
         } else {
           document.body.className = "";
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute("content", colors.home);
         }
-        
+
         this.ticks.scroll = false;
       });
       this.ticks.scroll = true;
