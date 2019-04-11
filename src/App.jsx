@@ -8,8 +8,14 @@ import Contact from "./components/contact";
 import { links, projectsLst } from "./data";
 import scrollSpy from "./utils/scroll-spy";
 import utils from "./utils/utils";
+import ReactGA from "react-ga";
 
 window.scrollSpy = scrollSpy;
+
+if (process.env.NODE_ENV === "production") {
+  ReactGA.initialize("UA-138058198-1");
+  ReactGA.pageview(window.location.href);
+}
 
 class App extends Component {
   componentDidMount() {
