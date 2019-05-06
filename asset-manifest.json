@@ -1,18 +1,20 @@
 {
-  "main.css": "/static/css/main.6efa2f5e.chunk.css",
-  "main.js": "/static/js/main.1c04ece1.chunk.js",
-  "main.js.map": "/static/js/main.1c04ece1.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.c5541365.js",
-  "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
-  "static/js/2.b2260249.chunk.js": "/static/js/2.b2260249.chunk.js",
-  "static/js/2.b2260249.chunk.js.map": "/static/js/2.b2260249.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.8132e6c0750f61efc084bfd7e0523967.js": "/precache-manifest.8132e6c0750f61efc084bfd7e0523967.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.6efa2f5e.chunk.css.map": "/static/css/main.6efa2f5e.chunk.css.map",
-  "static/media/game_of_life.png": "/static/media/game_of_life.0d5c8661.png",
-  "static/media/pomodoro_clock.png": "/static/media/pomodoro_clock.8ed4d905.png",
-  "static/media/recipe_box.png": "/static/media/recipe_box.34b11746.png",
-  "static/media/restaurant_review.png": "/static/media/restaurant_review.016833cf.png",
-  "static/media/tic_tac_toe.png": "/static/media/tic_tac_toe.0f192bfc.png"
+  "files": {
+    "main.css": "/static/css/main.dc9de7c0.chunk.css",
+    "main.js": "/static/js/main.bb2290e9.chunk.js",
+    "main.js.map": "/static/js/main.bb2290e9.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.c5541365.js",
+    "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
+    "static/js/2.b2260249.chunk.js": "/static/js/2.b2260249.chunk.js",
+    "static/js/2.b2260249.chunk.js.map": "/static/js/2.b2260249.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.df972900f904041d32e50021d157c077.js": "/precache-manifest.df972900f904041d32e50021d157c077.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.dc9de7c0.chunk.css.map": "/static/css/main.dc9de7c0.chunk.css.map",
+    "static/media/game_of_life.png": "/static/media/game_of_life.0d5c8661.png",
+    "static/media/pomodoro_clock.png": "/static/media/pomodoro_clock.8ed4d905.png",
+    "static/media/recipe_box.png": "/static/media/recipe_box.34b11746.png",
+    "static/media/restaurant_review.png": "/static/media/restaurant_review.016833cf.png",
+    "static/media/tic_tac_toe.png": "/static/media/tic_tac_toe.0f192bfc.png"
+  }
 }
