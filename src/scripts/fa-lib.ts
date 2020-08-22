@@ -35,4 +35,4 @@ library.add(
   faEnvelope
 );
 
-window.faLib = library;
+(window as any).faLib = library;

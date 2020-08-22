@@ -1,6 +1,8 @@
 import React from "react";
 import { skillLst, Achievements, Certificates } from "../data";
-import { A, Lst, SkillCard } from "../utils/components";
+import { A } from "../components/utils";
+import Lst from "../components/lst";
+import SkillCard from "../components/card-skill";
 
 const Txt = () => (
   <p>
@@ -8,8 +10,7 @@ const Txt = () => (
     <A
       className="link"
       href="https://goo.gl/maps/HvY74XbQmoD2"
-      aria-label="on google map"
-    >
+      aria-label="on google map">
       {" "}
       Jabalpur (M.P), India
     </A>
@@ -19,7 +20,7 @@ const Txt = () => (
   </p>
 );
 
-const About = () => (
+export const About = () => (
   <section id="about" className="sec sec-about">
     <h2 className="sec-heading">About Me</h2>
     <div className="sec-content">
@@ -36,5 +37,3 @@ const About = () => (
     </div>
   </section>
 );
-
-export default About;

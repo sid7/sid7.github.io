@@ -1,11 +1,6 @@
-import * as img from "../img";
+import { IconName } from "@fortawesome/fontawesome-svg-core";
 
-function clinks(slug) {
-  return {
-    Code: `https://codepen.io/sid7/pen/${slug}`,
-    View: `https://codepen.io/sid7/full/${slug}`
-  };
-}
+export { default as projectsLst } from "./projects";
 
 export const Certificates = {
   "Udaicty: Mobile Web Specialist Nanodegree":
@@ -20,11 +15,11 @@ export const Certificates = {
 export const skillLst = {
   "HTML 5": "html5",
   "CSS 3": "css3-alt",
-  "JavaScript": "js",
+  JavaScript: "js",
   "React JS": "react",
   "Node JS": "node-js",
-  "Git": "git-square"
-}
+  Git: "git-square"
+};
 export const Achievements = {
   "Recipient of Google India Challenge Scholarship: Mobile Web":
     "https://in.udacity.com/google-india-scholarships",
@@ -32,45 +27,23 @@ export const Achievements = {
     "https://sites.google.com/prod/udacity.com/gis2018/community/collaborative-projects/mobile-web-specialist#h.p_a_ltL5EO8YDP"
 };
 
-export const projectsLst = [
-  {
-    name: "Restaurant Review App",
-    desc: [""],
-    img: img.restaurantReview,
-    links: { "Project Repo": "https://github.com/sid7/mws-restaurant-stage-1" },
-    host: "github"
-  },
-  {
-    name: "The Game of Life",
-    desc: [""],
-    img: img.gameOfLife,
-    links: clinks("vgJwoP"),
-    host: "codepen"
-  },
-  {
-    name: "Recipe Box",
-    desc: [""],
-    img: img.recipeBox,
-    links: clinks("VPbGby"),
-    host: "codepen"
-  },
-  {
-    name: "Tic Tac Toe Game",
-    desc: [""],
-    img: img.ticTacToe,
-    links: clinks("XKZLmr"),
-    host: "codepen"
-  },
-  {
-    name: "Pomodoro Clock",
-    desc: [""],
-    img: img.pomodoroClock,
-    links: clinks("adRKBy"),
-    host: "codepen"
-  }
-];
+interface ILinkObj {
+  icon: IconName;
+  url: string;
+}
 
-export const links = {
+export interface ILinks {
+  email: string;
+  profiles: {
+    [platform: string]: ILinkObj;
+  };
+  social: {
+    [platform: string]: ILinkObj;
+  };
+  fcc: ILinkObj;
+}
+
+export const links: ILinks = {
   profiles: {
     Codepen: { icon: "codepen", url: "https://codepen.io/sid7/" },
     GitHub: { icon: "github", url: "https://github.com/sid7" }

@@ -1,0 +1,26 @@
+{
+  "profile": {
+    "CodePen": {
+      "icon": ["fab", "codepen"],
+      "url": "https://codepen.io/sid7"
+    },
+    "GitHub": {
+      "icon": ["fab", "github"],
+      "url": "https://github.com/sid7"
+    }
+  },
+  "social": {
+    "LinkedIn": {
+      "icon": ["fab", "linkedin"],
+      "url": "https://www.linkedin.com/in/suyashbhutani"
+    },
+    "Twitter": {
+      "icon": ["fab", "twitter"],
+      "url": "https://twitter.com/sidzxzx"
+    }
+  },
+  "email": {
+    "icon": ["far", "envelope"],
+    "url": "suyashsidzzz@gmail.com"
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = ({ handleClick }) => (
+export const Navbar = ({ handleClick }: { handleClick: any }) => (
   <nav className="site-nav">
     <a href="#about" onClick={handleClick}>
       About
@@ -13,5 +13,3 @@ const Navbar = ({ handleClick }) => (
     </a>
   </nav>
 );
-
-export default Navbar;

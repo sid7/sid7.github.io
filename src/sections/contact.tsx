@@ -1,8 +1,10 @@
 import React from "react";
-import { A, Stamp } from "../utils/components";
+import Stamp from "../components/stamp";
+import { A } from "../components/utils";
 import { FontAwesomeIcon as I } from "@fortawesome/react-fontawesome";
+import { ILinks } from "../data";
 
-const Contact = ({ email, social, profiles }) => (
+export const Contact = ({ email, social, profiles }: ILinks) => (
   <section id="contact" className="sec sec-contact">
     <h2 className="sec-heading">Contact</h2>
     <div className="sec-content">
@@ -24,5 +26,3 @@ const Contact = ({ email, social, profiles }) => (
     </div>
   </section>
 );
-
-export default Contact;
