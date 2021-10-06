@@ -14,9 +14,7 @@ const Txt = () => (
       {" "}
       Jabalpur (M.P), India
     </A>
-    . Self taught web developer able to build web site and web app (PWA) from
-    group up - from concept, layouts and UX to programming with back-end logic.
-    Fast learner, hard worker and team player.
+    . A self-taught web developer who can build a website and web app (PWA) from concept, layouts and UX to programming with back-end logic. Fast learner, hard worker and team player.
   </p>
 );
 

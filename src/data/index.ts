@@ -22,7 +22,7 @@ export const skillLst = {
 };
 export const Achievements = {
   "Recipient of Google India Challenge Scholarship: Mobile Web":
-    "https://in.udacity.com/google-india-scholarships",
+    "https://sites.google.com/prod/udacity.com/gis2018",
   "GIS2018 Collaborative projects Moderator":
     "https://sites.google.com/prod/udacity.com/gis2018/community/collaborative-projects/mobile-web-specialist#h.p_a_ltL5EO8YDP"
 };
